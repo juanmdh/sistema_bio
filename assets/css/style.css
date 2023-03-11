@@ -1,0 +1,61 @@
+.titulo-class{
+    background-color: blue;
+    color: aqua;
+    text-align: center;
+    border-radius: 10px;
+    padding: 20px;
+}
+titulo#-id{
+    margin-top: 400px;
+}
+.marginTop{
+    margin-top: 20px;
+}
+#columna{
+    border-style: solid;
+    border: 2px solid #000;
+}
+
+ .decoration{
+    text-decoration: none;
+    font-weight: bold;
+    color: #000;
+ }
+
+ .decoration:hover{
+    color: red;
+ }
+
+/************************ LOGIN ****************************/
+.inicio_sesion{
+    color: #000;
+    text-align: center;
+    font-weight: bold;    
+}
+.cuerpo-logeo{
+    /* background-color: #cfffca  !important; */
+  
+    background-image: url(../img/Imagen1.jpg); 
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;  
+}
+
+.card-header{
+    background-color: #fff !important; 
+}
+
+.tarjeta-logeo{
+    background-color: #fff !important;
+    color: #000;
+    text-align: center;
+    border-radius: 10px;
+    padding: 20px;
+    border-color:  #F5A23A !important;
+} 
+/************************ RECUPERAR CONTRASEÑA ****************************/
+.cambiar_contrasena{
+    color: #000;
+    text-align: center;
+    font-weight: bold;    
+}
