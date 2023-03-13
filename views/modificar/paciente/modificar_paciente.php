@@ -1,7 +1,7 @@
 <?php 
     session_start();
     if(empty($_SESSION["correo"])){
-        header("location:../index.php");  
+        header("location:../../../index.php");  
         //header("location:index.php");
     } 
 ?>
@@ -16,17 +16,17 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Perfil</title>
+    <title>Registro de paciente</title>
     <!-- Custom fonts for this template-->
-    <link rel="stylesheet" href="../assets/font/css/all.css">
+    <link rel="stylesheet" href="../../../assets/font/css/all.css">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="../assets/css/sb-admin-2.min.css" rel="stylesheet">
-    <script src="../assets/js/jquery.min.js"></script>
-    <script src="../assets/js/modificar_datos.js"></script>
+    <link href="../../../assets/css/sb-admin-2.min.css" rel="stylesheet">
+    <script src="../../../assets/js/jquery.min.js"></script>
+    <script src="../../../assets/js/modificar_datos.js"></script>
 </head>
 
 <body id="page-top">
@@ -75,9 +75,9 @@
                 <div id="collapanalisis" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Tipos de análisis:</h6>
-                        <a class="collapse-item" href="analisis/perfil_lipidico.php">Perfil lipídico</a>
-                        <a class="collapse-item" href="analisis/perfil_hepatico_qsa.php">Perfil hepático con QSA</a>
-                        <a class="collapse-item" href="analisis/hemograma_automatizado.php">Hemograma automatizado</a>
+                        <a class="collapse-item" href="buttons.html">Perfil lipídico</a>
+                        <a class="collapse-item" href="cards.html">Perfil hepático con QSA</a>
+                        <a class="collapse-item" href="cards.html">Hemograma automatizado</a>
                     </div>
                 </div>
             </li>
@@ -93,9 +93,8 @@
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Tipo de búsqueda:</h6>
-                        <a class="collapse-item" href="buscar/paciente/buscar_paciente.php">Paciente</a>
-                        <a class="collapse-item" href="buscar/medico/buscar_medico.php">Médico</a>
-                        <a class="collapse-item" href="buscar/trabajador/buscar_trabajador.php">Trabajador</a>
+                        <a class="collapse-item" href="utilities-color.html">Paciente</a>
+                        <a class="collapse-item" href="admin.php">Trabajador</a>
                     </div>
                 </div>
             </li>
@@ -111,13 +110,11 @@
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Tipo de búsqueda:</h6>
-                        <a class="collapse-item" href="registrar/paciente/registrar_paciente.php">Paciente</a>
-                        <a class="collapse-item" href="registrar/medico/registrar_medico.php">Médico</a>
-                        <a class="collapse-item" href="registrar/trabajador/registrar_trabajador.php">Trabajador</a>
+                        <a class="collapse-item" href="utilities-color.html">Paciente</a>
+                        <a class="collapse-item" href="admin.php">Trabajador</a>
                     </div>
                 </div>
             </li>
-
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsemodificar"
                     aria-expanded="true" aria-controls="collapsemodificar">
@@ -128,13 +125,12 @@
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Tipo de búsqueda:</h6>
-                        <a class="collapse-item" href="modificar/paciente/modificar_paciente.php">Paciente</a>
-                        <a class="collapse-item" href="modificar/medico/modificar_medico.php">Médico</a>
-                        <a class="collapse-item" href="modificar/trabajador/modificar_trabajador.php">Trabajador</a>
+                        <a class="collapse-item" href="modificar_paciente.php">Paciente</a>
+                        <a class="collapse-item" href="../medico/modificar_medico.php">Médico</a>
+                        <a class="collapse-item" href="../trabajador/modificar_trabajador.php">Trabajador</a>
                     </div>
                 </div>
             </li>
-
             <!-- Divider -->
             <hr class="sidebar-divider">
         </ul>
@@ -193,25 +189,25 @@
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">
                                 <?php
                                     //echo $_SESSION["correo"];
-                                    include "../model/conexion.php";
-                                    include "../model/buscar_personal.php"; 
+                                    include "../../../model/conexion.php";
+                                    include "../../../model/buscar_personal.php"; 
                                 ?>
                                 </span>
-                                <img class="img-profile rounded-circle" src="../assets/img/juan.png">
+                                <img class="img-profile rounded-circle" src="../../../assets/img/juan.png">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item"  href="perfil.php">
+                                <a class="dropdown-item"  href="../../perfil.php">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Perfil
                                 </a>
-                                <a class="dropdown-item" href="../controller/modificar_perfil.php">
+                                <a class="dropdown-item" href="../../../controller/modificar_perfil.php">
                                     <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Modificar
                                 </a> 
                                 <div class="dropdown-divider"></div>                                
-                                <a class="dropdown-item"  href="../controller/cerrar_login.php">
+                                <a class="dropdown-item"  href="../../../controller/cerrar_login.php">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Cerrar sesión
                                 </a>
@@ -228,7 +224,7 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Modificar datos</h1>
+                        <h1 class="h3 mb-0 text-gray-800">Registrar paciente</h1>
                     </div>
 
                     <div class="row col-12">
@@ -241,19 +237,12 @@
                                     <div class="card-body">
                                         <div class="row no-gutters align-items-center">
                                             <div class="col-10 mr-2">
-                                            <div class=" h1 text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                <?php
-                                                    echo $valores1['nombre'];
-                                                ?>
-                                                </div>                                                
-                                                <div class="h1 mb-0 font-weight-bold text-gray-800 text-primary ">
-                                                    <?php                                                        
-                                                        include "../model/buscar_personal.php"; 
-                                                    ?>
+                                                <div class=" col-12 h1 text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                                    Pacientes
+                                                </div>                                     
+                                                <div class="h1 mb-0 font-weight-bold text-gray-800 text-primary">
+                                                        Registro de pacientes
                                                 </div>
-                                            </div>
-                                            <div class="col-auto">
-                                                <img class="img-profile rounded-circle" src="../assets/img/juan.png" width="100" height="100"> 
                                             </div>
                                         </div>
                                     </div>
@@ -333,6 +322,35 @@
                                 ?>
                                 <div class="card shadow mb-4">
                                     <!-- Card Header - Accordion -->
+                                    <a href="#collapseCarFechaNacimineto" class="d-block card-header py-3" data-toggle="collapse"
+                                        role="button" aria-expanded="true" aria-controls="collapseCarFechaNacimineto">
+                                        <h6 class="m-0 font-weight-bold text-primary">Fecha de nacimiento</h6>
+                                    </a>
+                                    <!-- Card Content - Collapse -->
+                                    <div class="collapse gravity-center show " id="collapseCarFechaNacimineto">
+                                        <div class="row col-12 card-body">
+                                            <form id="formulario_fechanacimiento"  method="POST" class="needs-validation row col-12" novalidate>
+                                                <div class="col-4 mt-2">
+                                                    <strong>
+                                                        <?php
+                                                            echo $valores['dni'];
+                                                        ?>
+                                                    </strong>
+                                                </div>
+                                                <div class=" col-5"> 
+                                                        <input type="date" name="fecha_nacimineto" class="col-12 form-control" id="fecha_nacimineto" required>
+                                                </div>
+                                                <div class=" col-3">                                                   
+                                                        <!-- <input name="botonmodificar" type="submit" class="btn btn-primary" value="Modificar">                                                         -->
+                                                        <button id="botonmodificar_dni" name="botonmodificar_dni" type="submit" class="btn btn-primary" 
+                                                        value="Modificar">Modificar</button>
+                                                </div>
+                                            </form> 
+                                        </div>
+                                    </div>
+                                </div>                                 
+                                <div class="card shadow mb-4">
+                                    <!-- Card Header - Accordion -->
                                     <a href="#collapseCarTelefono" class="d-block card-header py-3" data-toggle="collapse"
                                         role="button" aria-expanded="true" aria-controls="collapseCarTelefono">
                                         <h6 class="m-0 font-weight-bold text-primary">Telefono</h6>
@@ -368,7 +386,7 @@
                                     <!-- Card Header - Accordion -->
                                     <a href="#collapseCarDireccion" class="d-block card-header py-3" data-toggle="collapse"
                                         role="button" aria-expanded="true" aria-controls="collapseCarDireccion">
-                                        <h6 class="m-0 font-weight-bold text-primary">Dirección</h6>
+                                        <h6 class="m-0 font-weight-bold text-primary">Sexo</h6>
                                     </a>
                                     <!-- Card Content - Collapse -->
                                     <div class="collapse gravity-center show " id="collapseCarDireccion">
@@ -395,38 +413,7 @@
                                 </div>                                 
                                 <?php                      
 
-                                ?>
-                                <div class="card shadow mb-4">
-                                    <!-- Card Header - Accordion -->
-                                    <a href="#collapseCarImagen" class="d-block card-header py-3" data-toggle="collapse"
-                                        role="button" aria-expanded="true" aria-controls="collapseCarImagen">
-                                        <h6 class="m-0 font-weight-bold text-primary">Foto</h6>
-                                    </a>
-                                    <!-- Card Content - Collapse -->
-                                    <div class="collapse gravity-center show " id="collapseCarImagen">
-                                        <div class="row col-12 card-body">
-                                            <form method="POST" class="needs-validation row col-12" novalidate>                                       
-
-                                                <div class="col-4 mt-2">
-                                                    <strong>
-                                                        <?php
-                                                            echo $valores['direccion'];
-                                                        ?>
-                                                    </strong>
-                                                </div>
-
-                                                <div class=" col-5 "> 
-                                                        <input type="file" id="formFile" class="col-12 form-control" required>
-                                                </div>
-                                                <div class=" col-3">                                                   
-                                                        <input name="botoningresar" type="submit" class="btn btn-primary" value="Modificar">
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-
-                                    
-                                </div>                                  
+                                ?>                                  
                             </div>           
                         </div>                        
                         <div class="col-1"></div>
@@ -489,44 +476,19 @@
         })
     </script> 
 
-    <script>
-        $(document).ready(function(){
-            $("#botonmodificar_telefono").on('click',function(e){ 
-                e.preventDefault();
-                modificar_telefono();
-            });
-        })
-    </script>     
+ 
 
-    <script>
-        $(document).ready(function(){
-            $("#botonmodificar_dni").on('click',function(e){ 
-                e.preventDefault();
-                modificar_dni();
-            });
-        })
-    </script> 
-
-<script>
-        $(document).ready(function(){
-            $("#botonmodificar_nombres").on('click',function(e){ 
-                e.preventDefault();
-                modificar_nombres();
-            });
-        })
-    </script> 
-
-    <script src="../assets/js/sweetalert2@11.js"></script>
+    <script src="../../../assets/js/sweetalert2@11.js"></script>
     
     <!-- Bootstrap core JavaScript-->
-    <script src="../assets/vendor/jquery/jquery.min.js"></script>
-    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../../assets/vendor/jquery/jquery.min.js"></script>
+    <script src="../../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Core plugin JavaScript-->
-    <script src="../assets/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="../../../assets/vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Custom scripts for all pages-->
-    <script src="../assets/js/sb-admin-2.min.js"></script>
+    <script src="../../../assets/js/sb-admin-2.min.js"></script>
 
     <!-- Page level plugins -->
     <!-- <script src="../assets/vendor/chart.js/Chart.min.js"></script> -->
@@ -534,8 +496,8 @@
     <!-- Page level custom scripts -->
     <!-- <script src="../assets/js/demo/chart-area-demo.js"></script>
     <script src="../assets/js/demo/chart-pie-demo.js"></script> -->
-    <script src="../assets/js/validar_campos_vacios.js"></script>      
-    <script src="../assets/js/limpiar.js"></script>      
+    <script src="../../../assets/js/validar_campos_vacios.js"></script>      
+    <script src="../../../assets/js/limpiar.js"></script>      
 </body>
 
 </html>

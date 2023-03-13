@@ -1,22 +1,20 @@
 <?php 
+        include_once ('../conexion.php');
+        include_once ('../login.php');
 
-    if( !empty($_POST["nombres"])){
-        $correo=$_SESSION["correo"];  
-
-        $sentencia = $con -> query("SELECT * FROM personal INNER JOIN cuenta on personal.dni = cuenta.dni_personal WHERE correo='$correo'");
-        $valores = mysqli_fetch_array($sentencia);  
+        $correo=$_SESSION['correo'];          
+        $nombres=$_POST['nombres'];     
         
-        $nombres=$_POST["nombres"];       
+        $sentencia = $con -> query("SELECT dni FROM personal INNER JOIN cuenta on personal.dni = cuenta.dni_personal WHERE correo='$correo'");
+        $valores = mysqli_fetch_array($sentencia);  
         $dni=$valores['dni'];
         
-        $sentencia_buscar = $con -> query("UPDATE personal SET nombres = '$nombres' WHERE dni='$dni'");
-        if($sentencia_buscar==true){
-            echo "<div class='alert alert-success'>Los nombres se modificaron</div>";      
-        }else{
-            echo "<div class='alert alert-danger'>Los nombres no se modificaron</div>";       
+        $sentencia_buscar = $con -> query("SELECT dni FROM personal WHERE dni='$dni'");
+        $fila = $sentencia_buscar->num_rows;  
+        // mysqli_query($con,"SELECT dni FROM personal WHERE dni='$dni'");         
+        if($fila=1){
+                $sentencia_modificar =  mysqli_query($con,"UPDATE personal SET nombres='$nombres' WHERE dni='$dni'");                
+                return 1;
+                echo'1';                
         } 
-        
-    }     
- 
 ?>
- 

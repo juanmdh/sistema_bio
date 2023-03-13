@@ -1,26 +1,16 @@
 <?php 
-if(!empty($_POST["botonbuscar"])){
-    if( !empty($_POST["correo"])){
+
+include_once '../conexion.php';
         $correo=$_POST['correo'];
         $contrasena=$_POST['contrasena'];
-        $contrasena_md5=md5($_POST['contrasena']);
+        $contrasena_md5=md5($contrasena);
 
-        $sentencia_buscar = $con -> query("SELECT * FROM cuenta WHERE correo='$correo'");
+        $sentencia_buscar = mysqli_query($con,"SELECT * FROM cuenta WHERE correo='$correo'");
+        $fila = mysqli_num_rows($sentencia_buscar);
 
-        if(!empty($_POST["contrasena"])){
-            $sentencia_modificar = $con -> query("UPDATE cuenta SET contrasena='$contrasena_md5' WHERE correo='$correo'");
-            // if($datos =$sentencia->fetch_object()){
-            //     $_SESSION["correo"]= $datos->correo; 
-            //     header("location:menu_admin.php");           
-            // }else{
-            //     echo "<div class='alert alert-danger'>Los datos ingresados son incorrectos</div>";
-            // }               
-            echo "<div class='alert alert-success'>Contraseña modificada</div>";              
-        }else{
-            echo "<div class='alert alert-danger'>No a ingresado su nueva contraseña</div>";
-        } 
-    }else{
-        echo "<div class='alert alert-danger'>No a ingresado el correo</div>";
-    } 
-} 
+        if($fila>0){
+                $sentencia_modificar =  mysqli_query($con,"UPDATE cuenta SET contrasena='$contrasena_md5' WHERE correo='$correo'");
+                return 1;
+                echo'1';
+        }
 ?>

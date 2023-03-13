@@ -1,8 +1,8 @@
 <?php
-    $host="localhost";
+    $host="localhost:33065";
     $usuario="root";
     $contrasena="";
-    $nombre_bd="bd_biologia";
+    $nombre_bd="sistema_bio";
  
 
     $con = new mysqli($host,$usuario,$contrasena,$nombre_bd);

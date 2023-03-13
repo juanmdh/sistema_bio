@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../assets/css/style.css" />  
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css" crossorigin="anonymous">      
     <script src="../assets/js/jquery.min.js"></script>
-    <script src="../assets/js/cambiar_contrasena.js"></script>
+    <script src="../assets/js/modificar_datos.js"></script>
     <title>Sistema - Recuperar</title>
 </head>
 <body class="cuerpo-logeo">
@@ -21,14 +21,9 @@
                 <div class="card tarjeta-logeo">
                     <div class="card-header text-center">
                         <h4   h4 class="cambiar_contrasena">CAMBIO DE CONTRASEÑA</h4> 
-                        <?php
-                            
-                            // include "../model/conexion.php";
-                            // include "../model/cambiar.php";
-                        ?>
                     </div>
                     <div class="card-body">
-                        <form  id="formulario"  method="POST"   >
+                        <form  id="formulario_contrasena"  method="POST"   >
                             <div class="row">
                                 <div class="col-12">
                                     
@@ -40,7 +35,7 @@
                                         <input type="text" name="contrasena" class="form-control" id="contrasena" placeholder="name@example.com" required>
                                         <label for="floatingInput">Ingrese su nueva contraseña</label>
                                     </div> 
-                                    <button id="botonbuscar" name="botonbuscar" type="submit" class="btn btn-primary" value="Modificar">Modificar</button>
+                                    <button id="botonmodificar_contrasena" name="botonmodificar_contrasena" type="submit" class="btn btn-primary" value="Modificar">Modificar</button>
                                 </div> 
                             </div>
                         </form> 
@@ -58,9 +53,9 @@
  
     <script>
         $(document).ready(function(){
-            $("#botonbuscar").on('click',function(e){ 
+            $("#botonmodificar_contrasena").on('click',function(e){ 
                 e.preventDefault();
-                modificar();
+                modificar_contrasena();
             });
         })
     </script> 

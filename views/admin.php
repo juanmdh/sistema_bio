@@ -75,9 +75,9 @@
                 <div id="collapanalisis" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Tipos de análisis:</h6>
-                        <a class="collapse-item" href="buttons.html">Perfil lipídico</a>
-                        <a class="collapse-item" href="cards.html">Perfil hepático con QSA</a>
-                        <a class="collapse-item" href="cards.html">Hemograma automatizado</a>
+                        <a class="collapse-item" href="analisis/perfil_lipidico.php">Perfil lipídico</a>
+                        <a class="collapse-item" href="analisis/perfil_hepatico_qsa.php">Perfil hepático con QSA</a>
+                        <a class="collapse-item" href="analisis/hemograma_automatizado.php">Hemograma automatizado</a>
                     </div>
                 </div>
             </li>
@@ -93,8 +93,9 @@
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Tipo de búsqueda:</h6>
-                        <a class="collapse-item" href="utilities-color.html">Paciente</a>
-                        <a class="collapse-item" href="admin.php">Trabajador</a>
+                        <a class="collapse-item" href="buscar/paciente/buscar_paciente.php">Paciente</a>
+                        <a class="collapse-item" href="buscar/medico/buscar_medico.php">Médico</a>
+                        <a class="collapse-item" href="buscar/trabajador/buscar_trabajador.php">Trabajador</a>
                     </div>
                 </div>
             </li>
@@ -110,12 +111,28 @@
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Tipo de búsqueda:</h6>
-                        <a class="collapse-item" href="utilities-color.html">Paciente</a>
-                        <a class="collapse-item" href="admin.php">Trabajador</a>
+                        <a class="collapse-item" href="registrar/paciente/registrar_paciente.php">Paciente</a>
+                        <a class="collapse-item" href="registrar/medico/registrar_medico.php">Médico</a>
+                        <a class="collapse-item" href="registrar/trabajador/registrar_trabajador.php">Trabajador</a>
                     </div>
                 </div>
             </li>
-
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsemodificar"
+                    aria-expanded="true" aria-controls="collapsemodificar">
+                    <i class="fa-solid fa-pen"></i>
+                    <span>Modificar</span>
+                </a>
+                <div id="collapsemodificar" class="collapse" aria-labelledby="headingUtilities"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Tipo de búsqueda:</h6>
+                        <a class="collapse-item" href="modificar/paciente/modificar_paciente.php">Paciente</a>
+                        <a class="collapse-item" href="modificar/medico/modificar_medico.php">Médico</a>
+                        <a class="collapse-item" href="modificar/trabajador/modificar_trabajador.php">Trabajador</a>
+                    </div>
+                </div>
+            </li>
             <!-- Divider -->
             <hr class="sidebar-divider">
         </ul>
@@ -504,8 +521,7 @@
                                 </div>
                                 <div class="card-body">
                                     <div class="text-center">
-                                        <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;"
-                                            src="img/undraw_posting_photo.svg" alt="...">
+ -->
                                     </div>
                                     <p>Add some quality, svg illustrations to your project courtesy of <a
                                             target="_blank" rel="nofollow" href="https://undraw.co/">unDraw</a>, a

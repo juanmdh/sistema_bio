@@ -1,7 +1,7 @@
 <?php 
     session_start();
     if(empty($_SESSION["correo"])){
-        header("location:../index.php");  
+        header("location:../../index.php");   
         //header("location:index.php");
     } 
 ?>
@@ -16,17 +16,17 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Perfil</title>
+    <title>Perfil lipídico</title>
     <!-- Custom fonts for this template-->
-    <link rel="stylesheet" href="../assets/font/css/all.css">
+    <link rel="stylesheet" href="../../assets/font/css/all.css">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="../assets/css/sb-admin-2.min.css" rel="stylesheet">
-    <script src="../assets/js/jquery.min.js"></script>
-    <script src="../assets/js/modificar_datos.js"></script>
+    <link href="../../assets/css/sb-admin-2.min.css" rel="stylesheet">
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/modificar_datos.js"></script>
 </head>
 
 <body id="page-top">
@@ -66,6 +66,7 @@
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
+            <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapanalisis"
                     aria-expanded="true" aria-controls="collapanalisis">
@@ -75,9 +76,9 @@
                 <div id="collapanalisis" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Tipos de análisis:</h6>
-                        <a class="collapse-item" href="analisis/perfil_lipidico.php">Perfil lipídico</a>
-                        <a class="collapse-item" href="analisis/perfil_hepatico_qsa.php">Perfil hepático con QSA</a>
-                        <a class="collapse-item" href="analisis/hemograma_automatizado.php">Hemograma automatizado</a>
+                        <a class="collapse-item" href="perfil_lipidico.php">Perfil lipídico</a>
+                        <a class="collapse-item" href="perfil_hepatico_qsa.php">Perfil hepático con QSA</a>
+                        <a class="collapse-item" href="hemograma_automatizado.php">Hemograma automatizado</a>
                     </div>
                 </div>
             </li>
@@ -93,9 +94,9 @@
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Tipo de búsqueda:</h6>
-                        <a class="collapse-item" href="buscar/paciente/buscar_paciente.php">Paciente</a>
-                        <a class="collapse-item" href="buscar/medico/buscar_medico.php">Médico</a>
-                        <a class="collapse-item" href="buscar/trabajador/buscar_trabajador.php">Trabajador</a>
+                        <a class="collapse-item" href="../buscar/paciente/buscar_paciente.php">Paciente</a>
+                        <a class="collapse-item" href="../buscar/medico/buscar_medico.php">Médico</a>
+                        <a class="collapse-item" href="../buscar/trabajador/buscar_trabajador.php">Trabajador</a>
                     </div>
                 </div>
             </li>
@@ -111,13 +112,13 @@
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Tipo de búsqueda:</h6>
-                        <a class="collapse-item" href="registrar/paciente/registrar_paciente.php">Paciente</a>
-                        <a class="collapse-item" href="registrar/medico/registrar_medico.php">Médico</a>
-                        <a class="collapse-item" href="registrar/trabajador/registrar_trabajador.php">Trabajador</a>
+                        <a class="collapse-item" href="../registrar/paciente/registrar_paciente.php">Paciente</a>
+                        <a class="collapse-item" href="../registrar/medico/registrar_medico.php">Médico</a>
+                        <a class="collapse-item" href="../registrar/trabajador/trabajador.php">Trabajador</a>
                     </div>
                 </div>
             </li>
-
+            
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsemodificar"
                     aria-expanded="true" aria-controls="collapsemodificar">
@@ -128,13 +129,12 @@
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Tipo de búsqueda:</h6>
-                        <a class="collapse-item" href="modificar/paciente/modificar_paciente.php">Paciente</a>
-                        <a class="collapse-item" href="modificar/medico/modificar_medico.php">Médico</a>
-                        <a class="collapse-item" href="modificar/trabajador/modificar_trabajador.php">Trabajador</a>
+                        <a class="collapse-item" href="../../modificar/paciente/modificar_paciente.php">Paciente</a>
+                        <a class="collapse-item" href="../../modificar/medico/modificar_medico.php">Médico</a>
+                        <a class="collapse-item" href="../../modificar/trabajador/modificar_trabajador.php">Trabajador</a>
                     </div>
                 </div>
             </li>
-
             <!-- Divider -->
             <hr class="sidebar-divider">
         </ul>
@@ -193,8 +193,8 @@
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">
                                 <?php
                                     //echo $_SESSION["correo"];
-                                    include "../model/conexion.php";
-                                    include "../model/buscar_personal.php"; 
+                                    include "../../model/conexion.php";
+                                    include "../../model/buscar_personal.php"; 
                                 ?>
                                 </span>
                                 <img class="img-profile rounded-circle" src="../assets/img/juan.png">
@@ -241,19 +241,12 @@
                                     <div class="card-body">
                                         <div class="row no-gutters align-items-center">
                                             <div class="col-10 mr-2">
-                                            <div class=" h1 text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                <?php
-                                                    echo $valores1['nombre'];
-                                                ?>
-                                                </div>                                                
-                                                <div class="h1 mb-0 font-weight-bold text-gray-800 text-primary ">
-                                                    <?php                                                        
-                                                        include "../model/buscar_personal.php"; 
-                                                    ?>
+                                                <div class=" col-12 h1 text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                                    EXAMEN LIPÍDICO
+                                                </div>                                     
+                                                <div class="h1 mb-0 font-weight-bold text-gray-800 text-primary">
+                                                        EXAMEN LIPÍDICO
                                                 </div>
-                                            </div>
-                                            <div class="col-auto">
-                                                <img class="img-profile rounded-circle" src="../assets/img/juan.png" width="100" height="100"> 
                                             </div>
                                         </div>
                                     </div>
@@ -489,44 +482,19 @@
         })
     </script> 
 
-    <script>
-        $(document).ready(function(){
-            $("#botonmodificar_telefono").on('click',function(e){ 
-                e.preventDefault();
-                modificar_telefono();
-            });
-        })
-    </script>     
+ 
 
-    <script>
-        $(document).ready(function(){
-            $("#botonmodificar_dni").on('click',function(e){ 
-                e.preventDefault();
-                modificar_dni();
-            });
-        })
-    </script> 
-
-<script>
-        $(document).ready(function(){
-            $("#botonmodificar_nombres").on('click',function(e){ 
-                e.preventDefault();
-                modificar_nombres();
-            });
-        })
-    </script> 
-
-    <script src="../assets/js/sweetalert2@11.js"></script>
+    <script src="../../assets/js/sweetalert2@11.js"></script>
     
     <!-- Bootstrap core JavaScript-->
-    <script src="../assets/vendor/jquery/jquery.min.js"></script>
-    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/vendor/jquery/jquery.min.js"></script>
+    <script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Core plugin JavaScript-->
-    <script src="../assets/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="../../assets/vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Custom scripts for all pages-->
-    <script src="../assets/js/sb-admin-2.min.js"></script>
+    <script src="../../assets/js/sb-admin-2.min.js"></script>
 
     <!-- Page level plugins -->
     <!-- <script src="../assets/vendor/chart.js/Chart.min.js"></script> -->
@@ -534,8 +502,8 @@
     <!-- Page level custom scripts -->
     <!-- <script src="../assets/js/demo/chart-area-demo.js"></script>
     <script src="../assets/js/demo/chart-pie-demo.js"></script> -->
-    <script src="../assets/js/validar_campos_vacios.js"></script>      
-    <script src="../assets/js/limpiar.js"></script>      
+    <script src="../../assets/js/validar_campos_vacios.js"></script>      
+    <script src="../../assets/js/limpiar.js"></script>      
 </body>
 
 </html>
